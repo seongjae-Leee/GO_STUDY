@@ -14,6 +14,7 @@ func main() {
 	// f := a * e
 
 	// 그래서 타입을 바꿔주게 되면 연산 가능
+	// 소수를 정수값으로 바꾸면 소수점 뒤가 날아감
 	var c int = int(b)
 	d := float64(a) * b
 	var e int64 = 7
