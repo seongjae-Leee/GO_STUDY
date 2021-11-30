@@ -13,3 +13,5 @@ func main() {
 		fmt.Println("Best Age")
 	}
 }
+
+// go 중급강의까지 이번주에 끝내고 nodejs랑 면접질문 공부 달리자
