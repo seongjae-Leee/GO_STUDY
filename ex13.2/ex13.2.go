@@ -9,7 +9,7 @@ type User struct {
 }
 
 type VIPUser struct {
-	UserInfo User
+	UserInfo User // 여기서 UserInfo 라는 요소를 만들지 말고 그냥 User라고만 썼을 경우 아래 출력하는 부분에서 vip.UserInfo.로 들어가지 말고 바로 User.으로 갈 수 있다.
 	VIPLevel int
 	Price    int
 }
