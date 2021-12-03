@@ -19,7 +19,7 @@ func ChangeData(arg Data) {
 }
 
 func main() {
-	var data Data
+	var data Data // 새로 정의되었음. 즉 value의 사이즈도 0이고 data[100]도 사이즈가 0이다.
 	ChangeData(data)
 	fmt.Printf("value = %d\n", data.value)
 	fmt.Printf("data[100] = %d\n", data.data[100])
