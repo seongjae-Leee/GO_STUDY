@@ -49,7 +49,7 @@ type Data struct {
 
 // *Data로 포인터로 받으면서 값을 넘기는게 아니라 주소값을 넘기게 하면 됨
 func ChangeData(arg *Data) {
-	arg.value = 999
+	arg.value = 999 // (*arg).value랑 같은 말. 즉 arg라는 값이 가르키고 있는 공간에 포함된 value값
 	arg.data[100] = 999
 }
 
@@ -65,3 +65,4 @@ func main() {
 value = 999
 data[100] = 999
 */
+// 왜냐하면 서로 다른걸 가르키던 data라는 변수가 같은 값을 가르키게 &data가 되었기 때문이다.
