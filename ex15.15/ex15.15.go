@@ -19,4 +19,4 @@ func main() {
 Hello World
 Healo World
 */
-// slice를 통해서 바이트 단위 부분 수정이 가능함을 알 수 있다. slice에 대한 더 깊은 이해 필요할듯..
+// slice를 통해서 바이트 단위 부분 수정이 가능함을 알 수 있다. slice에 대한 더 깊은 이해 필요할듯...
