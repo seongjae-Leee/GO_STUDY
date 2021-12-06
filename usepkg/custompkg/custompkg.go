@@ -6,3 +6,13 @@ import "fmt"
 func PrintCustom() {
 	fmt.Println("This is custom pakcage~!!")
 }
+
+// 아래와 같이 type도 대문자면 외부공개된다. cystompkg.Student{"성재", 27, 100} 이런 식으로...
+type Student struct {
+	Name  string
+	Age   int
+	Score int
+}
+
+// 아래와 같이 전역변수도 대문자면 외부공개된다. custompkg.Ratio = 10 이런 식으로...
+var Ratio int
