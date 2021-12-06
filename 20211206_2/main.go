@@ -42,4 +42,54 @@ func main() {
 		len : 기존길이에 추가한 개수만큼 더한 값
 		포인터 : 새로운 배열을 가르키는 슬라이스 구조체를 return
 	*/
+
+	slice3 := []int{1, 2, 3}       // len : 3, cap : 3
+	slice4 := append(slice3, 4, 5) // 공간이 부족해서 2배로 늘린 6개짜리 capability의 배열을 만들어서 slice 배열의 모든 값을 복사하고 추가해줌.
+	// 즉 len : 5, cap : 6
+	fmt.Println("슬라이스3 : ", slice3, len(slice3), cap(slice3))
+	fmt.Println("슬라이스4 : ", slice4, len(slice4), cap(slice4))
+
+	slice3[1] = 200
+	fmt.Println("슬라이스3 : ", slice3, len(slice3), cap(slice3))
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	/*
+		슬라이싱 : 배열의 일부를 집어낸다..
+		array[startIndex : endIndex]
+		주의할 점 : endIndex-1까지
+	*/
+	arr := [5]int{1, 2, 3, 4, 5}
+	slice5 := arr[1:3] // 슬라이싱(index 1부터 (3-1)까지)
+
+	fmt.Println("arr : ", arr)
+	fmt.Println("slice5 : ", slice5, len(slice5), cap(slice5))
+	/*
+		arr :  [1 2 3 4 5]
+		slice5 :  [2 3] 2 4
+	*/
+	// arr의 두번째 값을 변경해보자
+	arr[1] = 100
+
+	fmt.Println("arr : ", arr)
+	fmt.Println("slice5 : ", slice5, len(slice5), cap(slice5))
+
+	slice5 = append(slice5, 200)
+	fmt.Println("arr : ", arr)
+	fmt.Println("slice5 : ", slice5, len(slice5), cap(slice5))
+	/*
+		arr :  [1 100 3 4 5]
+		slice5 :  [100 3] 2 4
+		arr :  [1 100 3 200 5]
+		slice5 :  [100 3 200] 3 4
+	*/
+
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// 슬라이스를 슬라이싱
+	slice6 := []int{1, 2, 3, 4, 5}
+	slice7 := slice6[1:3] // [2 3]
+	fmt.Println(slice7)
+	// 처음부터 하고 싶으면 slice6[:3] 즉 0 생략 가능
+	// 끝까지 하고 싶으면 slice6[1:len(slice6)]
+	// 전체를 하고 싶으면 slice6[:]  -> 배열 전체를 가르킬 때 주로 씀
 }
