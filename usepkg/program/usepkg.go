@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"goproject/usepkg/custompkg"
+	"goproject/usepkg/exinit"
 
 	"github.com/guptarohit/asciigraph"
 	"github.com/tuckersGo/musthaveGo/ch16/expkg"
@@ -15,6 +16,8 @@ func main() {
 	data := []float64{3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5}
 	graph := asciigraph.Plot(data)
 	fmt.Println(graph)
+
+	exinit.PrintD()
 }
 
 // go mod tidy로 import한 모듈 설치 -> go.sum에서 다운받은 패키지들을 볼 수 있음
@@ -26,3 +29,11 @@ func main() {
 // 하고서 ./program.exe 실행
 
 // 실행하게 되면 usepkg 의 main함수가 실행되므로 custompkg.PrintCustom()이 먼저 실행됨...
+
+// 추가
+/*
+f() d :  4
+f() d :  5
+exinit.init function 6
+d :  6
+*/
