@@ -20,7 +20,7 @@ Go 모듈 만들고 외부 패키지 활용하기
 1. goproject/usepkg 폴더 생성
 2. go mod init goproject/usepkg
 3. mkdir custompkg
-4. Custompkg.go
+4. custompkg.go
 5. mkdir program
 6. usepkg.go
 7. go mod tidy
