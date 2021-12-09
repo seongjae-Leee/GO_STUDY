@@ -10,6 +10,7 @@ func mul(a, b int) int {
 	return a * b
 }
 
+//													함수타입으로, int 두개를 입력받고 int 하나를 출력하는 함수
 func getOperator(op string) func(int, int) int {
 	if op == "+" {
 		return add
